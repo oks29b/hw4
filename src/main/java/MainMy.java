@@ -9,9 +9,9 @@ public class MainMy {
         users.setPassword("12345");
 
         UserRepository userRepository = new UserRepositoryImpl();
-        //userRepository.save(users);
+//        userRepository.save(users);
 
-        userRepository.removeById(1);
+        userRepository.removeById(2);
         System.out.println(userRepository.findAll());
     }
 }
