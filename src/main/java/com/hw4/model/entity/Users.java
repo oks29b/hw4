@@ -10,7 +10,7 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column
-    private String username;
+    private String login;
     @Column
     private String password;
 }

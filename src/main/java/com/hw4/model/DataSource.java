@@ -1,10 +1,11 @@
 package com.hw4.model;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
 import org.hibernate.Session;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class DataSource {
 
