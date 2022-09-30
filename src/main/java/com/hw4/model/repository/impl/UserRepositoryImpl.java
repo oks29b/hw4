@@ -9,14 +9,7 @@ import org.hibernate.Transaction;
 import javax.persistence.Query;
 import java.util.List;
 
-public class UserRepositoryImpl implements UserRepository {
-
-    public void save(Users user){
-        Session session = DataSource.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(user);
-        transaction.commit();
-    }
+public class UserRepositoryImpl extends DefaultRepositoryImpl<Users> implements UserRepository{
 
     public List<Users> findAll(){
         Session session = DataSource.getInstance().getSession();
@@ -29,10 +22,11 @@ public class UserRepositoryImpl implements UserRepository {
         return session.get(Users.class, id);
     }
 
-    public void removeById(Integer id){
+    public void remove(Integer id){
         Session session = DataSource.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.get(Users.class, id));
+        Users user = session.get(Users.class, id);
+        session.delete(user);
         transaction.commit();
     }
 }
