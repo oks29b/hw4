@@ -13,9 +13,9 @@ public class MainMy {
         users2.setPassword("11111");
 
         UserRepository userRepository = new UserRepositoryImpl();
-//        userRepository.save(users2);
+//        userRepository.save(user1);
 
-        userRepository.remove(5);
+        userRepository.remove(7);
         System.out.println(userRepository.findAll());
     }
 }

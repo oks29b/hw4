@@ -59,12 +59,12 @@
       <plugin>
           <groupId>org.flywaydb</groupId>
           <artifactId>flyway-maven-plugin</artifactId>
-          <version>9.3.0</version>
+          <version>8.0.2</version>
           <configuration>
             <locations>
               <location>filesystem:src/main/resources/migrations</location>
             </locations>
-            <url>jdbc:mysql://localhost:3306/test</url>
+            <url>jdbc:mysql://localhost:3306/hw4</url>
             <user>root</user>
             <password>d6KTf*gFLnY^</password>
           </configuration>
