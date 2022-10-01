@@ -48,4 +48,4 @@ docker-compose.yml
 .tool-versions
 
 # Ignore all target
-target/
+target/*
