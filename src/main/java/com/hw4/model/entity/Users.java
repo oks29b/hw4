@@ -9,8 +9,13 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column
     private String login;
+
     @Column
     private String password;
+
+    @Column(name = "role")
+    private Role roles;
 }
