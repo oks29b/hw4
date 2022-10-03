@@ -32,8 +32,7 @@ foreign key (countryId) references country(id)
 CREATE TABLE users(
 id int PRIMARY KEY AUTO_INCREMENT,
 login varchar(255) not null UNIQUE,
-password varchar(255) not null,
-role varchar(40)
+password varchar(255) not null
 );
 
 
@@ -59,10 +58,23 @@ CREATE TABLE departments(
 id int PRIMARY KEY AUTO_INCREMENT,
 nameDepartment varchar(255) not null,
 aircompanyId int,
-employeeId int,
-foreign key (employeeId) references employee(id),
 foreign key (aircompanyId) references aircompany(id)
 );
+
+CREATE TABLE roles(
+id int PRIMARY KEY AUTO_INCREMENT,
+nameRole varchar(40) not null
+);
+
+CREATE TABLE rolesUsers(
+id int PRIMARY KEY AUTO_INCREMENT,
+roleId int,
+usersId int,
+foreign key (roleId) references roles(id),
+foreign key (usersId) references users(id)
+);
+
+
 
 
 

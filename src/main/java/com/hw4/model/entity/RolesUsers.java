@@ -1,20 +1,22 @@
-//package com.hw4.model.entity;
-//
-//import lombok.Data;
-//
-//import javax.persistence.Entity;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.ManyToOne;
-//
-//@Entity(name = "rolesUsers")
-//@Data
-//public class RolesUsers {
-//
-//        @ManyToOne
-//        @JoinColumn(name = "roleID")
-//        private Roles roles;
-//
-//        @ManyToOne
-//        @JoinColumn(name = "usersId")
-//        private Users users;
-//}
+package com.hw4.model.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "rolesUsers")
+@Data
+public class RolesUsers {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+        @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+        @JoinColumn(name = "roleId")
+        private Roles roles;
+
+        @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+        @JoinColumn(name = "usersId")
+        private Users users;
+}
