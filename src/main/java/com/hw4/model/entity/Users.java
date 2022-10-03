@@ -16,6 +16,7 @@ public class Users {
     @Column
     private String password;
 
-    @Column(name = "role")
-    private Role roles;
+    @ManyToOne
+    @JoinColumn(name = "roleId")
+    private Roles roles;
 }
