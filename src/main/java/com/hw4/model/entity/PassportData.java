@@ -1,10 +1,17 @@
 package com.hw4.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity(name = "passportData")
+@Entity
+@Table(name = "passportData")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Data
 public class PassportData {
 
@@ -22,6 +29,6 @@ public class PassportData {
     private int number;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "usersId")
     private Users users;
 }

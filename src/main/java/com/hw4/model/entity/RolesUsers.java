@@ -12,11 +12,11 @@ public class RolesUsers {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-        @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-        @JoinColumn(name = "roleId")
-        private Roles roles;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "roleId")
+    private Roles roles;
 
-        @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-        @JoinColumn(name = "usersId")
-        private Users users;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "usersId")
+    private Users users;
 }
