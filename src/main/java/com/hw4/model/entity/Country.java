@@ -4,7 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Entity(name = "country")
+@Entity
+@Table(name = "country")
 @Data
 public class Country {
     @Id

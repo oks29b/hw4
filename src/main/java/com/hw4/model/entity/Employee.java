@@ -34,4 +34,10 @@ public class Employee implements Serializable {
     @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
     private Set<EmployeeDepartments> employeeDepartments;
 
+    public String toString() {
+        return "Employee{" +
+                "post='" + post + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

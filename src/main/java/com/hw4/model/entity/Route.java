@@ -1,11 +1,18 @@
 package com.hw4.model.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Set;
 
-@Entity(name = "route")
-@Data
+@Entity
+@Table(name = "route")
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Route {
 
     @Id
@@ -13,10 +20,18 @@ public class Route {
     private int id;
 
     @Column
-    private String arrivalTime ;
+    private Timestamp arrivalTime ;
 
     @Column
-    private String departureTime ;
+    private Timestamp departureTime ;
 
+    @ManyToMany(mappedBy = "routeSet")
+    Set<City> citySet;
 
+    public String toString() {
+        return "Route{" +
+                "arrivalTime=" + arrivalTime +
+                ", departureTime=" + departureTime +
+                '}';
+    }
 }

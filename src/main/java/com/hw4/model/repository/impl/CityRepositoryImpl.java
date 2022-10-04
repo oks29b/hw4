@@ -34,7 +34,7 @@ public class CityRepositoryImpl extends DefaultRepositoryImpl<City> implements C
     @Override
     public List<City> findAll() {
         Session session = DataSource.getInstance().getSession();
-        Query query = session.createQuery("from city");
+        Query query = session.createQuery("from City");
         return query.getResultList();
     }
 }

@@ -24,7 +24,7 @@ public class RouteRepositoryImpl extends DefaultRepositoryImpl<Route> implements
     @Override
     public List<Route> findAll() {
         Session session = DataSource.getInstance().getSession();
-        Query query = session.createQuery("from route");
+        Query query = session.createQuery("from Route");
         return query.getResultList();
     }
 }

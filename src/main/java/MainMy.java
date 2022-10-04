@@ -2,6 +2,7 @@ import com.hw4.model.entity.*;
 import com.hw4.model.repository.*;
 import com.hw4.model.repository.impl.*;
 
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,8 +24,24 @@ public class MainMy {
         EmployeeDepartments employeeDepartments = new EmployeeDepartments();
 
         EmpolyeeDeptRepository empolyeeDeptRepository = new EmployeeDeptImpl();
-        
 
+        CityRepository cityRepository =new CityRepositoryImpl();
+        RouteRepository routeRepository = new RouteRepositoryImpl();
+        CountryRepository countryRepository = new CountryRepositoryImpl();
+
+//        Set<Route> routeSet1 = new HashSet<>();
+//        routeSet1.add(routeRepository.findById(1));
+//
+//        City city2 = City.builder()
+//                .nameCity("Roma")
+//                .countryId(countryRepository.findById(2))
+//                .routeSet(routeSet1)
+//                .build();
+//
+//
+//        cityRepository.save(city2);
+
+        System.out.println(cityRepository.findAll());
 
 
     }

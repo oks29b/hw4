@@ -36,7 +36,7 @@ public class EmployeeRepositoryImpl extends DefaultRepositoryImpl<Employee> impl
     @Override
     public List<Employee> findAll() {
         Session session = DataSource.getInstance().getSession();
-        Query query = session.createQuery("from employee");
+        Query query = session.createQuery("from Employee");
         return query.getResultList();
     }
 }

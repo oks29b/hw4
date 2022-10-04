@@ -9,7 +9,7 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "users")
+@Entity
 @Table(name = "users")
 public class Users {
     @Id
