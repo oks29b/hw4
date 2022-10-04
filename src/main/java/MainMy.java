@@ -11,37 +11,21 @@ public class MainMy {
 
         AirCompanyRepository airCompanyRepository =new AirCompanyRepositoryImpl();
 
+        AirplaneRepository airplaneRepository = new AirplaneRepositoryImpl();
+
         RolesRepositoryImpl roles =new RolesRepositoryImpl();
 
         UserRepository userRepository = new UserRepositoryImpl();
 
         PassportDataRepositoyImpl passportDataRepositoy = new PassportDataRepositoyImpl();
 
-        DepartmentsRepository departmentsRepository = new DepartmentsRepositoryImpl();
-
-        EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
-
-        EmployeeDepartments employeeDepartments = new EmployeeDepartments();
-
-        EmpolyeeDeptRepository empolyeeDeptRepository = new EmployeeDeptImpl();
-
         CityRepository cityRepository =new CityRepositoryImpl();
+
         RouteRepository routeRepository = new RouteRepositoryImpl();
-        CountryRepository countryRepository = new CountryRepositoryImpl();
 
-//        Set<Route> routeSet1 = new HashSet<>();
-//        routeSet1.add(routeRepository.findById(1));
-//
-//        City city2 = City.builder()
-//                .nameCity("Roma")
-//                .countryId(countryRepository.findById(2))
-//                .routeSet(routeSet1)
-//                .build();
-//
-//
-//        cityRepository.save(city2);
+        TicketRepository ticketRepository = new TicketRepositoryImpl();
 
-        System.out.println(cityRepository.findAll());
+        System.out.println(ticketRepository.findById(1));
 
 
     }

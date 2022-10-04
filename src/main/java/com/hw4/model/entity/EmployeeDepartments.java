@@ -1,12 +1,15 @@
 package com.hw4.model.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employeeDepartments")
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeDepartments {
 
     @Id
@@ -20,4 +23,12 @@ public class EmployeeDepartments {
     @ManyToOne
     @JoinColumn(name = "departmentsId")
     private Departments departments;
+
+    @Override
+    public String toString() {
+        return "EmployeeDepartments{" +
+                "employee=" + employee +
+                ", departments=" + departments +
+                '}';
+    }
 }

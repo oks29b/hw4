@@ -1,9 +1,6 @@
 package com.hw4.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,7 +9,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Data
+@Getter
+@Setter
 public class AirCompany {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +18,11 @@ public class AirCompany {
 
     @Column
     private String aircompanyName;
+
+    @Override
+    public String toString() {
+        return "AirCompany{" +
+                "aircompanyName='" + aircompanyName + '\'' +
+                '}';
+    }
 }

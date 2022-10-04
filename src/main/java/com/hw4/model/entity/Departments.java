@@ -1,9 +1,6 @@
 package com.hw4.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,7 +11,8 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Departments implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +25,9 @@ public class Departments implements Serializable {
     @JoinColumn(name = "aircompanyId")
     private AirCompany airCompanyId;
 
-//    @OneToMany(mappedBy = "departments", fetch = FetchType.EAGER)
-//    private Set<EmployeeDepartments> employeeDept;
+    public String toString() {
+        return "Departments{" +
+                "nameDepartment='" + nameDepartment + '\'' +
+                '}';
+    }
 }

@@ -1,10 +1,17 @@
 package com.hw4.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity(name = "airplane")
+@Entity
+@Table(name = "airplane")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class Airplane {
     @Id

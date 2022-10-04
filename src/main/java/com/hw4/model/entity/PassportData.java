@@ -31,4 +31,12 @@ public class PassportData {
     @ManyToOne
     @JoinColumn(name = "usersId")
     private Users users;
+
+    public String toString() {
+        return "PassportData{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", number=" + number +
+                '}';
+    }
 }
